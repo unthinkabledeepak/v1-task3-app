@@ -29,6 +29,6 @@ node {
     
     stage('Trigger ManifestUpdate') {
                 echo "triggering updatemanifestjob"
-                build job: 'updatemanifesttask3order', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
+                build job: 'updatemanifesttask3order', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER), string(name: 'APPIMAGE', value: 'myapp-image')]
         }
 }
