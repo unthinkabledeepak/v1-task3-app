@@ -35,11 +35,11 @@ FROM node:13-alpine
 
 WORKDIR /usr/src/app
 
-COPY package*.json ./
+COPY ./orders/package*.json ./
 RUN npm update -g npm
 RUN npm install
 
-COPY . .
+COPY ./orders/ .
 
 EXPOSE 3000
 CMD [ "npm", "run", "start" ]
