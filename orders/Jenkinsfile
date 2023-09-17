@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("deepakc826/task3")
+       app = docker.build("deepakc826/v1-task3")
     }
 
     stage('Test image') {
